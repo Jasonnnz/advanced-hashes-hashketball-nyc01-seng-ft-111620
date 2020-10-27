@@ -169,4 +169,7 @@ def player_numbers(player_name)
     player_infos.each do |player_detail|
       if player_detail[:player_name] == player_name
         return player_detail[:numbers]
-  
+      end
+    end
+  end
+end
