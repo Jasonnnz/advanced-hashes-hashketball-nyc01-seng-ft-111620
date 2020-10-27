@@ -199,4 +199,4 @@ def get_player_shoes(players)
 end
 
 def big_shoe_rebounds
-  home_shoes = get_player_shoes()
+  home_shoes = get_player_shoes(game_hash[:home][:players])
