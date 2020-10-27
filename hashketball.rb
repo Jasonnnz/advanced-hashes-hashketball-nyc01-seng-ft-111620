@@ -174,13 +174,7 @@ end
 def player_numbers(team_name)
   if game_hash[:home][:team_name] == team_name
     get_player_numbers(game_hash[:home][:players])
-  game_hash.each do |team, team_info|
-    if team_info[:team_name] = team_name
-    player_infos = team_info[:players]
-    player_infos.each do |player_detail|
-      
-        jersey_nums << player_detail[:numbers]
-      end
-    end
+  else 
+    get_player_numbers(game_hash[:away][:players])
   end
 end
