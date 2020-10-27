@@ -166,13 +166,14 @@ end
 def get_player_numbers(players)
   jersey_nums = []
   players.each do |player_info|
-  jersey_nums  << player_info[:number] 
+    jersey_nums  << player_info[:number] 
   end
+  jersey_nums
 end
   
 def player_numbers(team_name)
   if game_hash[:home][:team_name] == team_name
-    get
+    get_player_numbers(game_hash[:home][:players])
   game_hash.each do |team, team_info|
     if team_info[:team_name] = team_name
     player_infos = team_info[:players]
