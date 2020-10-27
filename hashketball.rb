@@ -1,5 +1,5 @@
 # Write your code below game_hash
-def game_hash
+def game_hash 
   {
     home: {
       team_name: "Brooklyn Nets",
@@ -127,3 +127,12 @@ def game_hash
 end
 
 # Write code here
+def num_points_scored(player_name)
+  game_hash.each do |team,v|
+    team.each do |team_info,value|
+      if game_hash[team][:players][:player_name] == player_name
+        return game_hash[team][:players][:points]
+      end
+    end
+  end  
+end
