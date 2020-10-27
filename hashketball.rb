@@ -202,4 +202,6 @@ def big_shoe_rebounds
   home_shoes = get_player_shoes(game_hash[:home][:players])
   away_shoes = get_player_shoes(game_hash[:away][:players])
   all_shoes = home_shoes + away_shoes
-  all_shoes.max 
+  max_shoe_size = all_shoes.max 
+  game_hash.each do |team,team_info|
+    player_info = team_info[:players]
