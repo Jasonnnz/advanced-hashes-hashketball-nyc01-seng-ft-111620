@@ -180,5 +180,10 @@ def player_numbers(team_name)
 end
 
 def player_stats(player_name)
-  if game_hash[:home][:player].include? player_name
+  player_info = game_hash[:home][:player]
+  player_info.each do |player|
+    if player[:player_name] == player_name
+      return player
+    end
+  end
 end
