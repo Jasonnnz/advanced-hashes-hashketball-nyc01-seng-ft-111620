@@ -202,4 +202,4 @@ def big_shoe_rebounds
   home_shoes = get_player_shoes(game_hash[:home][:players])
   away_shoes = get_player_shoes(game_hash[:away][:players])
   all_shoes = home_shoes + away_shoes
-   
+  all_shoes.max 
