@@ -162,3 +162,8 @@ def team_names
     team_info[:team_name]
   end
 end
+
+def player_numbers(player_name)
+  game_hash.each do |team, team_info|
+    player_infos = team_info[:players]
+  
